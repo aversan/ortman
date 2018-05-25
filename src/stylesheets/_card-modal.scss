@@ -5,7 +5,6 @@
   
   &.modal {
     position: absolute;
-    width: calc(100vw - 20px);
     overflow: visible;
     left: 0;
     right: 0;
@@ -13,13 +12,14 @@
     bottom: 0;
     margin: auto;
 
-    .is-mobile & {
-      width: 100vw;
-    }
-
     .modal-dialog {
+      width: calc(100vw - 20px);
       max-width: none;
       margin: 0;
+
+      .is-mobile & {
+        width: 100vw;
+      }
     }
   }
 
