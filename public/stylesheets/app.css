@@ -6782,7 +6782,7 @@ h4.text-uppercase,
 .icon-sprite:before {
   content: '';
   display: inline-block;
-  background-image: url("../images/sprite.png");
+  background-image: url("/images/sprite.png");
   position: relative; }
 
 .icon-sprite.icon-check {
