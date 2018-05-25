@@ -1,0 +1,54 @@
+.footer {
+  font-size: .8125rem;
+  background-color: $gray-700;
+  overflow: hidden;
+
+  &-copy {
+    font-size: .75rem;
+    line-height: 1.2;
+
+    @include media-breakpoint-down(sm) {
+      max-width: 110px;
+    }
+  }
+
+  &-address {
+    font-size: .8125rem;
+    line-height: 1.2;
+    letter-spacing: .1ex;
+  }
+
+  &-phones {
+    font-size: 1.3125rem; // 21px
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: .075ex;
+  }
+
+  &-phones-item {
+    margin-right: .9875rem;
+    
+    & + .footer-phones-item::before {
+      content: '|';
+      color: $gray-500;
+      padding-right: .9375rem;
+
+       @include media-breakpoint-down(sm) {
+        display: none;
+       }
+    }
+  }
+
+
+  &-warning-wrapper {
+    background-color: $gray-800;
+  }
+
+  &-warning {
+    display: block;
+    font-size: .625rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: .4ex;
+  }
+}

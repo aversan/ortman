@@ -1,0 +1,475 @@
+// promo
+
+.main-promo {
+  &-container {
+    margin-top: -5rem;
+    border-bottom: 1px solid #f7f2eb;    
+
+    @include media-breakpoint-down(sm) {
+      margin-top: -4rem;
+    }
+  }
+
+  &-wide-slider-slide {
+    &.cover-background {
+      height: (636 / 1280) * 100 * 1vw;
+
+      @include media-breakpoint-down(xs) {
+        height: (512 / 320) * 100 * 1vw;
+      }
+    }  
+  }
+
+  &-image-01 {
+    background-image: url('../images/main/main-promo-01-desktop.jpg');
+
+    @include media-breakpoint-down(sm) {
+      background-image: url('../images/main/main-promo-01-mobile.jpg');
+    }
+  }
+
+  &-image-02 {
+    background-image: url('../images/main/main-promo-02-desktop.jpg');
+
+    @include media-breakpoint-down(sm) {
+      background-image: url('../images/main/main-promo-02-mobile.jpg');
+    }
+  }
+
+  &-image-03 {
+    background-image: url('../images/main/main-promo-03-desktop.jpg');
+
+    @include media-breakpoint-down(sm) {
+      background-image: url('../images/main/main-promo-03-mobile.jpg');
+    }
+  }
+
+  &-image-04 {
+    background-image: url('../images/main/main-promo-04-desktop.jpg');
+
+    @include media-breakpoint-down(sm) {
+      background-image: url('../images/main/main-promo-04-mobile.jpg');
+    }
+  }
+}
+
+// section
+
+.main-section {
+  &-descr {
+    line-height: 1.71;
+
+    @include media-breakpoint-down(sm) {
+      line-height: 1.4285;
+    }
+  }
+
+  &-title {
+    @include media-breakpoint-down(sm) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+// info
+
+.main-info-items {
+  overflow-x: hidden;
+}
+
+.main-info-item {
+  position: relative;
+
+  @include media-breakpoint-down(sm) {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &-col-image {
+    order: 1;
+  }
+  
+  &-col-content {
+    order: 2;
+
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
+  }
+
+  &-image {
+    @include media-breakpoint-down(sm) {
+      max-width: 185px;
+
+      .main-info-item:first-child & {
+        max-width: 240px;
+      }
+    }
+  }
+
+  &-title,
+  &-descr p {
+    margin-bottom: 1.875rem; // 30px
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: .9375rem; // 15px
+    }
+
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  &-title {
+    max-width: 370px;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 1.875rem; // 30px
+    }
+  }
+
+  &-descr {
+    font-weight: $font-weight-light;
+    line-height: 1.71;
+  }
+
+  &:nth-child(2n) .main-info-item-col-image {
+    order: 2;
+  
+    @include media-breakpoint-down(sm) {
+      order: 1;
+    }
+  }
+  
+  &:nth-child(2n) .main-info-item-col-content {
+    order: 1;
+    text-align: right;
+
+    @include media-breakpoint-down(sm) {
+      order: 2;
+      text-align: center;
+    }
+  } 
+  
+  &:nth-child(2n) .main-info-item-title {
+    margin-left: auto;
+
+    @include media-breakpoint-down(sm) {
+      margin-left: 0;
+    }
+  }
+  
+  &:first-child .main-info-item-image { border-radius: 0 !important; }
+}
+
+.main-info-item + .main-info-item {
+  margin-top: 1.25rem; // 20px
+
+  @include media-breakpoint-down(sm) {
+      margin-top: 2.5rem; // 40px
+  }
+}
+
+// features
+
+.main-features {
+  &-item {
+    position: relative;
+
+    &-icon {
+      height: 70px;
+
+      @include media-breakpoint-down(sm) {
+        width: 80px;
+        height: 60px;
+        text-align: right;
+        transform: scale(.85);
+      }
+    }
+
+    &-title {
+      max-width: 200px;
+
+      @include media-breakpoint-down(sm) {
+        max-width: 140px;
+        font-size: .875rem;
+        font-weight: $font-weight-normal;
+        line-height: 1.125rem; // 18px
+      }
+    }
+  }
+}
+
+// map
+
+.main-map {
+  &.embed-responsive {
+    &::before {
+      padding-top: percentage(600 / 1280);
+
+      @include media-breakpoint-down(sm) {
+        padding-top: percentage(320 / 360);
+      }
+    }
+  }
+
+  &-label {
+    font-weight: $font-weight-medium;
+    color: $gray-600;
+  }
+
+  &-select {
+    min-width: 280px;
+    font-size: .8125rem;
+    color: $gray-600;
+  }
+} 
+
+// tech
+
+.main-tech {
+  &-container,
+  &-image {
+    width: 999px;
+
+    @include media-breakpoint-down(sm) {
+      width: auto;
+    }
+  }
+  
+  &-container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &-image {
+    background: url('../images/main/tech-schema-02-desktop.jpg') center center no-repeat;
+    height: 467px;
+  }
+
+  &-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+
+    @include media-breakpoint-down(sm) {
+      position: static;
+    }
+  }
+
+  &-item {
+    position: absolute !important;
+    border-bottom: 1px solid transparent;
+    width: 320px;
+    height: 124px;
+
+    @include media-breakpoint-down(sm) {
+      position: relative !important;
+      bottom: auto !important;
+      height: auto;
+      width: auto;
+    }
+
+    &::before {
+      opacity: 0;
+
+      @include media-breakpoint-down(sm) {
+        opacity: 1;
+      }
+    }
+
+    &:nth-child(1),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(6) {
+      left: 50%;
+      margin-left: 150px;
+
+      @include media-breakpoint-down(sm) {
+        left: auto;
+        margin-left: 0;
+      }
+    }
+
+    &:nth-child(2),
+    &:nth-child(5),
+    &:nth-child(7) {
+      right: 50%;
+      margin-right: 150px;
+      text-align: right;
+
+      @include media-breakpoint-down(sm) {
+        text-align: left;
+        margin-right: 0;
+        right: auto;
+      }
+    }
+
+    &:nth-child(1) {
+      bottom: 393px;
+    }
+
+    &:nth-child(2) {
+      bottom: 366px;
+    }
+
+    &:nth-child(3) {
+      bottom: 264px;
+    }
+
+    &:nth-child(4) {
+      bottom: 139px;
+    }
+
+    &:nth-child(5) {
+      bottom: 214px;
+    }
+
+    &:nth-child(6) {
+      bottom: 0;
+    }
+
+    &:nth-child(7) {
+      bottom: 40px;
+    }
+  }
+
+  &-item-title.h4 {
+    line-height: 1.125;
+
+    @include media-breakpoint-down(sm) {
+      font-size: .875rem;
+      line-height: 1.285;
+    }
+  }
+
+  &-item-description {
+    font-weight: $font-weight-light;
+  }
+} 
+
+// competition
+
+.main-competition {
+  &-container,
+  &-image,
+  &-wrapper,
+  &-row {
+    height: 320px;
+  }
+
+  &-container,
+  &-wrapper,
+  &-row {
+    @include media-breakpoint-down(sm) {
+      height: auto;
+    }
+  }
+
+  &-image {
+    @include media-breakpoint-down(sm) {
+      height: 160px;
+    }
+  }
+
+  &-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    @include media-breakpoint-down(sm) {
+      position: static;
+    }
+  }
+
+  &-container {
+    position: relative;
+  }
+
+  &-image {
+    background: $gray-200 url('../images/main/main-competition-bg-desktop.png') left center no-repeat;
+    background-size: contain;
+    position: relative;
+
+    @include media-breakpoint-down(sm) {
+      background-image: url('../images/main/main-competition-bg-mobile.png');
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 363px;
+      height: 291px;
+      right: 50%;
+      margin-right: 60px;
+      background: url('../images/main/main-competition-image.png') left center no-repeat;
+      bottom: -62px;
+
+      @include media-breakpoint-down(sm) {
+        margin-right: -105px;
+        width: 209px;
+        height: 167px;
+        background-size: contain;
+      }
+    }
+  }
+  
+  &-row {
+    padding-top: 80px;
+    padding-bottom: 80px;    
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 48px;
+      padding-bottom: 0;
+    }
+  }
+
+  &-title,
+  &-buttons {
+    max-width: 480px;
+
+    @include media-breakpoint-down(sm) {
+      max-width: none;
+    }
+  }
+
+  &-title {
+    margin-top: -.3rem;
+
+    @include media-breakpoint-down(sm) {
+      max-width: 160px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &-button {
+    font-size: 1.125rem;
+    font-weight: $font-weight-bold;
+    padding: 1rem;
+
+    @include media-breakpoint-up(md) {
+      background-color: $white;
+      border-color: $white;      
+    }
+  }
+}
+
+// catalog
+
+.main-catalog {
+  &-title {
+    @include media-breakpoint-down(sm) {
+      max-width: 160px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

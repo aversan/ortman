@@ -1,0 +1,21 @@
+{%
+  set items = [
+    { index: '01', imageName: 'main-promo-01-mobile.jpg' },
+    { index: '02', imageName: 'main-promo-01-mobile.jpg' },
+    { index: '03', imageName: 'main-promo-03-mobile.jpg' },
+    { index: '04', imageName: 'main-promo-04-mobile.jpg' }
+  ]
+%}
+
+<div class="main-promo-container" data-module="promo-wide-slider" id="promo">
+	<div class="swiper-container js-swiper-container main-promo-wide-slider-container">
+		<div class="swiper-wrapper">
+          {% for item in items %}
+		  <div class="swiper-slide cover-background main-promo-wide-slider-slide main-promo-image-{{item.index}}">
+			<img class="img-fluid invisible" width="320" height="512" src="../images/main/{{item.imageName}}">
+		  </div>
+          {% endfor %}
+		</div>
+		<div class="swiper-pagination main-promo-wide-slider-pagination js-swiper-pagination"></div>
+	</div>
+</div>

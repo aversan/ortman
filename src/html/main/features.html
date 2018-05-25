@@ -1,0 +1,26 @@
+{%
+  set features = [
+    { iconName: 'stylish', title: 'Стильные и модные цветовые сочетания' },
+    { iconName: 'soft', title: 'Мягкие ортопедические стельки' },
+    { iconName: 'natural', title: 'Натуральные и экологичные материалы' }
+  ]
+%}
+
+<div id="features">
+  <div class="container">
+    <div class="row no-gutters">
+      <div class="col-12 col-md-9 mx-md-auto">
+        <ul class="justify-content-md-between flex-md-nowrap main-features-list row list-unstyled mb-0 pt-2 pb-2 pt-md-2 pb-md-0">
+          {% for feature in features %}
+          <li class="main-features-item col-12 col-md-auto text-md-center d-flex flex-row align-items-center align-items-md-start flex-md-column py-2 py-md-0">
+            <div class="main-features-item-icon d-flex align-items-center justify-content-center align-items-md-end mr-6 mr-md-auto ml-md-auto">
+              <i class="icon icon-sprite icon-{{feature.iconName}}"></i>
+            </div>
+            <h5 class="main-features-item-title mt-md-6 mb-0 mx-md-auto"><a class="main-features-item-link fill-area-link" href="">{{feature.title}}</a></h5>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

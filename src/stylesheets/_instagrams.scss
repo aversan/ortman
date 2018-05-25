@@ -1,0 +1,54 @@
+.instagram-card {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  transition: $transition-base;
+  overflow: hidden;
+  box-shadow: none;
+
+  &__header-primary {
+    font-size: .8125rem;
+    flex-grow: 1;
+    max-width: calc(100% - 70px);
+  }
+
+  &__header-secondary {
+    width: 30px;
+    min-width: 30px;
+    flex-basis: 30px;
+  }
+}
+
+.instagram-button-group {
+  &__item {
+    font-size: .75rem;
+  }
+}
+
+.instagram-slider {
+  &-container {
+    padding: 10px;
+    margin: -10px;
+  }
+
+  &-pagination {
+    position: static;
+  } 
+
+  &-slide {
+    position: relative;
+    width: 50%;
+    margin-right: 20px;
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+
+  &-container-primary {
+    @include media-breakpoint-down(sm) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+} 

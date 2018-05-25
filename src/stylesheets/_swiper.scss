@@ -1,0 +1,40 @@
+.swiper-pagination-bullet {
+	width: 14px;
+	height: 14px;
+  opacity: 1;
+  position: relative;
+  background-color: transparent;
+
+  &::before {
+  	content: '';
+  	position: absolute;
+  	left: 0;
+  	top: 0;
+  	right: 0;
+  	bottom: 0;
+  	margin: auto;
+  	background-color: $gray-400;
+  	border-radius: 100px;
+  	z-index: 1;
+  	width: 7px;
+  	height: 7px;
+  }
+}
+
+.swiper-pagination-bullet-active {
+	&::before {
+  	background-color: $pink;
+  	width: 14px;
+  	height: 14px;
+	}
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin-left: 2px;
+  margin-right: 2px;
+  vertical-align: middle;
+} 
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+	bottom: 30px;
+}

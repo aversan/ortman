@@ -1,0 +1,78 @@
+.icon {
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-sprite {
+  &:before {
+    content: '';
+    display: inline-block;
+    background-image: url('../images/sprite.png');
+    position: relative;
+  }
+
+  &.icon-check {
+    @include sprite('icon-check');
+  }
+
+  &.icon-soft {
+    @include sprite('icon-soft');
+  }
+
+  &.icon-stylish {
+    @include sprite('icon-stylish');
+  }
+
+  &.icon-natural {
+    @include sprite('icon-natural');
+  }
+
+  &.icon-close-primary {
+    @include sprite('icon-close-primary');
+  }
+
+  &.icon-arrow-prev-sm {
+    @include sprite('icon-arrow-prev-sm');
+  }
+
+  &.icon-arrow-next-sm {
+    @include sprite('icon-arrow-next-sm');
+  }
+
+  &.icon-instagram {
+    @include sprite('icon-instagram');
+  }
+
+  &.icon-like {
+    @include sprite('icon-like');
+  }
+
+  &.icon-comment {
+    @include sprite('icon-comment');
+  }
+}
+
+.icon-help {
+  border-radius: 100px;
+  border: 1px solid $gray-200;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: '?';
+    font-size: 12px;
+  }
+
+  &.hoverable:hover {
+    border-color: $gray-300;
+  }
+}

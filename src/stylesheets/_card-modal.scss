@@ -1,0 +1,154 @@
+.card-modal {
+  &-container {
+    position: relative;
+  }
+  
+  &.modal {
+    position: absolute;
+    width: calc(100vw - 20px);
+    overflow: visible;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    .is-mobile & {
+      width: 100vw;
+    }
+
+    .modal-dialog {
+      max-width: none;
+      margin: 0;
+    }
+  }
+
+  &-title.text-uppercase {
+    max-width: 360px;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1rem;
+      line-height: 1.25;
+      max-width: none;
+    }
+  }
+
+  &-sizes-title {
+    font-size: .75rem;
+  }
+
+  &-sizes-btns {
+    margin: -5px;
+    font-size: 0;
+  }
+
+  &-sizes-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    line-height: 2.5rem;
+    margin: 5px;
+    font-size: .75rem;
+  }
+
+  &-divider {
+    border-top: 1px solid $border-color;
+  }
+
+  &-form-control,
+  &-form-plaintext {
+    font-size: .8125rem;
+  }
+
+  &-form-label {
+    font-size: .8125rem;
+  }
+
+  &-form-submit {
+    font-size: .75rem;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: .1ex;
+  }
+
+  &-form-text {
+    color: $gray-600;
+  }
+
+  &-header {
+    height: 50px;
+    height: 20px;
+  }
+
+  &-body {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+
+    @include media-breakpoint-down(sm) {
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &-row {
+    margin-left: -25px;
+    margin-right: -25px;
+  }
+
+  &-col {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  &-col-left {
+    max-width: 496px;
+
+    @include media-breakpoint-down(sm) {
+      max-width: 100%;
+    }
+  }
+
+  &-col-right {
+    max-width: 465px;
+
+    @include media-breakpoint-down(sm) {
+      max-width: 100%;
+    }
+  }
+
+  .card-modal-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media-breakpoint-down(sm) {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      padding: 0;
+      margin: 0;
+      right: 0;
+      top: 0;
+    }
+
+    .icon {
+      @include media-breakpoint-down(sm) {
+        transform: scale(0.5);
+      }
+    }
+  }
+
+  &-price {
+    line-height: 1;
+  }
+
+  &-container {
+    @include media-breakpoint-down(sm) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+} 

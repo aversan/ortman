@@ -1,0 +1,67 @@
+{% macro item(
+  imageName='',
+  title='',
+  description=''
+) %}
+  <div class="main-info-item">
+    <div class="container main-info-item-container">
+      <div class="row align-items-center no-gutters main-info-item-row">
+        <div class="col-12 col-md-6 main-info-item-col-content">
+          <h4 class="main-info-item-title text-uppercase">{{title}}</h4>
+          <div class="main-info-item-descr">
+            {{description|safe}}
+          </div>
+        </div>
+        <div class="col-12 col-md-6 main-info-item-col-image text-center">
+          <img class="img-fluid main-info-item-image rounded-circle" src="images/main/{{imageName}}.jpg" alt="" width="371" height="370">
+        </div>
+      </div>
+    </div>
+  </div>
+{% endmacro %}
+
+{%
+set items = [
+  {
+    imageName: 'info-01',
+    title: 'Супинатор с нанесением рельефа «массажные пальчики»',
+    description: '<p>Обеспечивает точечный массаж, предупреждает усталость стоп при ходьбе. Рельеф обеспечивает антислип эффект не позволяя стопе скользить.</p>'
+  },
+  {
+    imageName: 'info-02',
+    title: 'Облегчённая подошва FLATFORM',
+    description: '<p>Модная в этом сезоне подошва декорирована контрастными полосками, раскрашенными вручную</p><p>При своей высоте 4 см подошва очень лёгкая и удобная. Физиологический перекат на носке подошвы не ограничивает движение стопы при ходьбе</p>'
+  },
+  {
+    imageName: 'info-03',
+    title: 'Удобные и комфортные ортопедические стельки',
+    description: '<p>Ортопедические стельки оснащены дополнительным смягчающим карбоновым слоем, который увеличивает амортизационные и абсорбционные свойства, благодаря чему каждый шаг в обновлённой обуви станет ещё более комфортным.</p><p>Стельки выполнены из 100% натуральной пробки португальского дуба для поддержания сводов стопы наилучшим образом.</p>'
+  },
+  {
+    imageName: 'info-04',
+    title: 'Прочный и устойчивый к влаге материал',
+    description: '<p>Сандалии изготовлены из высокотехнологичного материала BIOCHAMPION, близкого по характеристикам к натуральной коже и имеющего ряд преимуществ</p><p>— Материал устойчив к влажности и очень лёгкий в обслуживании.<br>— Материал мягок и приятен для кожи.<br>— Материал гипоаллергенный и не имеет запаха</p>'
+  },
+  {
+    imageName: 'info-05',
+    title: 'Модные тренды',
+    description: '<p>В сезоне 2018 года внимание дизайнеров приковано к деталям обуви. Элегантные банты одни из самых эффектных элементов декора венчающих обувь. Делаем выбор в пользу замшевого банта в контрасте с глянцевым материалом верха.</p>'
+  }
+]
+%}
+
+<section id="why">
+  <div class="container text-center">
+    <div class="row no-gutters">
+      <div class="col-12 col-md-8 mx-md-auto">
+        <h2 class="h1 main-section-title mb-0">5 причин купить <a class="text-uppercase" href="">#<span class="text-danger">О</span>ртманы</a></h2>
+      </div>
+    </div>
+  </div>
+  <div class="section-divider-half"></div>
+  <div class="main-info-items">
+    {% for i in range(0, items.length) -%}
+      {{ item(imageName=items[i].imageName, title=items[i].title, description=items[i].description) }}
+    {% endfor %}
+  </div>
+</section>

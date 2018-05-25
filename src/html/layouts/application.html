@@ -1,0 +1,41 @@
+{% from 'macros/helpers.html' import sprite %}
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{{ title }}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="stylesheets/app.css">
+    {% include "shared/app-icons.html" %}
+    {% block head %}{% endblock %}
+	</head>
+	<body class="page-body">
+		{% block header %}
+			{% include "shared/header.html" %}
+		{% endblock %}
+		<div class="page-wrapper">
+		  {% block content %}{% endblock %}
+		</div>
+		{% block footer %}
+			{% include "shared/footer.html" %}
+		{% endblock %}
+		{% block javascript %}
+			<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+			<script src="javascripts/app.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js"></script>
+			<script>
+				$(document).ready(function() {
+					$(".fancybox").fancybox({
+						helpers	: {
+							title	: {
+								type: 'outside'
+							}
+						}
+					});
+				});
+			</script>
+    	{% endblock %}
+  </body>
+</html>

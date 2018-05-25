@@ -1,0 +1,27 @@
+.btn-outline-secondary {
+	color: $gray-900;
+
+	@include hover-focus {
+		background-color: $red;
+		border-color: $red;
+		color: $white;
+	}
+
+	&:not(:disabled):not(.disabled):active,
+	&:not(:disabled):not(.disabled).active,
+	.show > &.dropdown-toggle {
+		background-color: $red;
+		border-color: $red;
+		color: $white;		
+
+		@include hover-focus {
+			background-color: $red;
+			border-color: $red;
+			color: $white;			
+		}
+	}
+}
+
+.btn-outline-secondary-alt {
+	color: $red;
+}

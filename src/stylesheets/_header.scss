@@ -1,0 +1,80 @@
+.header-wrapper {
+  height: 5rem;
+
+  @include media-breakpoint-down(sm) {
+    height: 4rem;
+  }
+}
+
+.header {
+  height: 5rem;
+  border-bottom: 1px solid rgba($black, .1);
+  text-transform: uppercase;
+  letter-spacing: .1ex;
+
+  @include media-breakpoint-down(sm) {
+    height: auto;
+    min-height: 4rem;
+  }
+
+  &-brand-image {
+    @include media-breakpoint-down(sm) {
+      height: 23px;
+      width: auto;
+    }
+  }
+
+  &-collapse {
+    position: relative;
+
+    @include media-breakpoint-down(sm) {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+  }
+
+  &-nav {
+    @include media-breakpoint-down(sm) {
+      margin-top: 12px;
+    }
+  }
+
+  &-link {
+    font-size: .8125rem;
+    line-height: 1.25;
+    font-weight: 500;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1rem;
+      line-height: 1.25;
+    }
+  }
+
+  &-buy-title {
+    font-size: .8125rem;
+    font-weight: 500;
+    color: #898989;
+  }
+
+  &-buy-btn {
+    font-size: .75rem;
+    line-height: 1.5;
+    font-weight: $font-weight-medium;
+    min-width: 130px;
+  }
+
+  &-toggler {
+    @include media-breakpoint-down(sm) {
+        margin-right: -8px;
+    }
+  }
+}
+
+.header.navbar-light .navbar-nav .show > .nav-link,
+.header.navbar-light .navbar-nav .active > .nav-link,
+.header.navbar-light .navbar-nav .nav-link.show,
+.header.navbar-light .navbar-nav .nav-link.active {
+  @include media-breakpoint-down(sm) {
+    background-color: $gray-200;
+  }
+} 

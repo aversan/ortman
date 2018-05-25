@@ -1,0 +1,25 @@
+<section data-module="instagram-slider" id="instagram">
+  <div class="container text-center">
+    <div class="row no-gutters">
+      <div class="col-12 col-md-10 mx-md-auto">
+        <h2 class="h1 main-section-title mb-4 mb-md-0"><a class="text-uppercase" href="">#<span class="text-danger">О</span>ртманы</a> сделают тебя звездой Instagram!</h2>
+      </div>
+    </div>
+  </div>
+  <div class="section-divider-half d-none d-md-block"></div>
+  <div class="instagram-slider-container-primary container mx-auto">
+    <div class="swiper-container instagram-slider-container js-swiper-container">
+      <div class="swiper-pagination instagram-slider-pagination js-swiper-pagination d-md-none"></div>
+      <div class="section-divider-half d-md-none"></div>
+      <div class="swiper-wrapper">
+        {% for i in [1,2] -%}
+        {% if loop.index <= 2 %}
+        <div class="swiper-slide instagram-slider-slide d-flex align-items-center">
+          {% include "main/instagram-card.html" %}
+        </div>
+        {% endif %}
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+</section>
