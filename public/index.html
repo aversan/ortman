@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
     <link rel="stylesheet" href="stylesheets/app.css">
     <!-- Generate using http://realfavicongenerator.net/ -->
 
@@ -16,7 +17,7 @@
 	<body class="page-body">
 		
 			<div class="header-wrapper">
-  <nav class="navbar navbar-expand-md navbar-light header fixed-top bg-white">
+  <nav class="navbar navbar-expand-md navbar-light header fixed-top bg-white" id="header">
     <div class="container">
       <a class="navbar-brand header-brand py-0" href="#promo" data-module="scroll-to">
         <img class="header-brand-image" src="images/ortman-logo.png" width="124" height="30" alt="Ортманы">
@@ -56,7 +57,8 @@
 		<div class="page-wrapper">
 		  
 	
-	
+	<div data-spy="scroll" data-target="#header" data-offset="0">
+		
 
 <div class="main-promo-container" data-module="promo-wide-slider" id="promo">
 	<div class="swiper-container js-swiper-container main-promo-wide-slider-container">
@@ -83,8 +85,8 @@
 	</div>
 </div>
 
-	<div class="section-divider-half d-none d-md-block"></div>
-	
+		<div class="section-divider-half d-none d-md-block"></div>
+		
 
 <div id="features">
   <div class="container">
@@ -118,8 +120,8 @@
     </div>
   </div>
 </div>
-	<div class="section-divider"></div>
-	
+		<div class="section-divider"></div>
+		
 <section class="gallery-wide-slider" data-module="gallery-wide-slider" id="lookbook">
   <div class="container text-center">
     <div class="row no-gutters">
@@ -169,8 +171,8 @@
     </div>
   </div>
 </section>
-	<div class="section-divider"></div>
-	<section data-module="catalog-slider" id="their-ortmans">
+		<div class="section-divider"></div>
+		<section data-module="catalog-slider" id="their-ortmans">
   <div class="container text-center">
     <div class="row no-gutters">
       <div class="col-12 col-md-8 mx-md-auto">
@@ -476,8 +478,8 @@
 
   </div>
 </section>
-	<div class="section-divider"></div>
-	<div class="main-competition-container" id="competition">
+		<div class="section-divider"></div>
+		<div class="main-competition-container" id="competition">
 	<div class="main-competition-image"></div>
 	<div class="section-divider-half d-md-none"></div>
 	<div class="main-competition-wrapper">
@@ -500,8 +502,8 @@
 		</div>
 	</div>
 </div>
-	<div class="section-divider"></div>
-	
+		<div class="section-divider"></div>
+		
 
 
 
@@ -526,7 +528,7 @@
           </div>
         </div>
         <div class="col-12 col-md-6 main-info-item-col-image text-center">
-          <img class="img-fluid main-info-item-image rounded-circle" src="/images/main/info-01.jpg" alt="" width="371" height="370">
+          <img class="img-fluid main-info-item-image rounded-circle wow fadeIn" src="/images/main/info-01.jpg" alt="" width="371" height="370">
         </div>
       </div>
     </div>
@@ -543,7 +545,7 @@
           </div>
         </div>
         <div class="col-12 col-md-6 main-info-item-col-image text-center">
-          <img class="img-fluid main-info-item-image rounded-circle" src="/images/main/info-02.jpg" alt="" width="371" height="370">
+          <img class="img-fluid main-info-item-image rounded-circle wow fadeIn" src="/images/main/info-02.jpg" alt="" width="371" height="370">
         </div>
       </div>
     </div>
@@ -560,7 +562,7 @@
           </div>
         </div>
         <div class="col-12 col-md-6 main-info-item-col-image text-center">
-          <img class="img-fluid main-info-item-image rounded-circle" src="/images/main/info-03.jpg" alt="" width="371" height="370">
+          <img class="img-fluid main-info-item-image rounded-circle wow fadeIn" src="/images/main/info-03.jpg" alt="" width="371" height="370">
         </div>
       </div>
     </div>
@@ -577,7 +579,7 @@
           </div>
         </div>
         <div class="col-12 col-md-6 main-info-item-col-image text-center">
-          <img class="img-fluid main-info-item-image rounded-circle" src="/images/main/info-04.jpg" alt="" width="371" height="370">
+          <img class="img-fluid main-info-item-image rounded-circle wow fadeIn" src="/images/main/info-04.jpg" alt="" width="371" height="370">
         </div>
       </div>
     </div>
@@ -594,7 +596,7 @@
           </div>
         </div>
         <div class="col-12 col-md-6 main-info-item-col-image text-center">
-          <img class="img-fluid main-info-item-image rounded-circle" src="/images/main/info-05.jpg" alt="" width="371" height="370">
+          <img class="img-fluid main-info-item-image rounded-circle wow fadeIn" src="/images/main/info-05.jpg" alt="" width="371" height="370">
         </div>
       </div>
     </div>
@@ -604,8 +606,8 @@
   </div>
 </section>
 
-	<div class="section-divider"></div>
-	<section data-module="instagram-slider" id="instagram">
+		<div class="section-divider"></div>
+		<section data-module="instagram-slider" id="instagram">
   <div class="container text-center">
     <div class="row no-gutters">
       <div class="col-12 col-md-10 mx-md-auto">
@@ -696,8 +698,8 @@
     </div>
   </div>
 </section>
-	<div class="section-divider"></div>
-	
+		<div class="section-divider"></div>
+		
 
 <section id="tech">
   <div class="container text-center">
@@ -766,8 +768,8 @@
     </div>
   </div>
 </section>
-	<div class="section-divider"></div>
-	<section class="main-map-section" id="map-section">
+		<div class="section-divider"></div>
+		<section class="main-map-section" id="map-section">
   <div class="container text-center">
     <div class="row no-gutters">
       <div class="col-12 col-md-8 mx-md-auto">
@@ -788,6 +790,7 @@
     <iframe class="embed-responsive-item" src="https://orteka.ru/salon/iframe.php#moscow_map" frameborder="0" id="map"></iframe>
   </div> 
 </section>
+	</div>
 	<div class="modal modal-lg rules-modal mx-auto pr-0" id="rules">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -853,6 +856,7 @@
 			<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 			<script src="javascripts/app.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
 			<script>
 				$(document).ready(function() {
 					$(".fancybox").fancybox({
@@ -863,6 +867,7 @@
 						}
 					});
 				});
+              	new WOW().init();
 			</script>
     	
   </body>
