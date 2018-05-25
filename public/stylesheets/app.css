@@ -6842,7 +6842,7 @@ h4.text-uppercase,
   min-width: 6px; }
 
 .gallery-wide-slider-prev:hover .icon-sprite.icon-arrow-prev-sm::before {
-  background-position: -244px -45px;
+  background-position: -167px -45px;
   height: 11px;
   width: 6px; }
 
@@ -6852,7 +6852,7 @@ h4.text-uppercase,
   min-width: 6px; }
 
 .gallery-wide-slider-next:hover .icon-sprite.icon-arrow-next-sm::before {
-  background-position: -232px -56px;
+  background-position: -155px -56px;
   height: 11px;
   width: 6px; }
 
@@ -7000,7 +7000,7 @@ h4.text-uppercase,
   min-width: 20px; }
 
 .icon-sprite.icon-check::before {
-  background-position: -202px -76px;
+  background-position: -125px -76px;
   height: 15px;
   width: 20px; }
 
@@ -7010,7 +7010,7 @@ h4.text-uppercase,
   min-width: 79px; }
 
 .icon-sprite.icon-soft::before {
-  background-position: -77px 0px;
+  background-position: 0px 0px;
   height: 56px;
   width: 79px; }
 
@@ -7020,7 +7020,7 @@ h4.text-uppercase,
   min-width: 95px; }
 
 .icon-sprite.icon-stylish::before {
-  background-position: -156px 0px;
+  background-position: -79px 0px;
   height: 45px;
   width: 95px; }
 
@@ -7030,7 +7030,7 @@ h4.text-uppercase,
   min-width: 66px; }
 
 .icon-sprite.icon-natural::before {
-  background-position: 0px -89px;
+  background-position: 0px -56px;
   height: 67px;
   width: 66px; }
 
@@ -7040,7 +7040,7 @@ h4.text-uppercase,
   min-width: 46px; }
 
 .icon-sprite.icon-close-primary::before {
-  background-position: -156px -45px;
+  background-position: -79px -45px;
   height: 46px;
   width: 46px; }
 
@@ -7050,7 +7050,7 @@ h4.text-uppercase,
   min-width: 6px; }
 
 .icon-sprite.icon-arrow-prev-sm::before {
-  background-position: -238px -45px;
+  background-position: -161px -45px;
   height: 11px;
   width: 6px; }
 
@@ -7060,7 +7060,7 @@ h4.text-uppercase,
   min-width: 6px; }
 
 .icon-sprite.icon-arrow-next-sm::before {
-  background-position: -232px -45px;
+  background-position: -155px -45px;
   height: 11px;
   width: 6px; }
 
@@ -7070,7 +7070,7 @@ h4.text-uppercase,
   min-width: 30px; }
 
 .icon-sprite.icon-instagram::before {
-  background-position: -202px -45px;
+  background-position: -125px -45px;
   height: 31px;
   width: 30px; }
 
@@ -7080,7 +7080,7 @@ h4.text-uppercase,
   min-width: 24px; }
 
 .icon-sprite.icon-like::before {
-  background-position: -156px -91px;
+  background-position: -79px -91px;
   height: 21px;
   width: 24px; }
 
@@ -7090,7 +7090,7 @@ h4.text-uppercase,
   min-width: 22px; }
 
 .icon-sprite.icon-comment::before {
-  background-position: -156px -112px;
+  background-position: 0px -123px;
   height: 22px;
   width: 22px; }
 
@@ -7163,7 +7163,7 @@ h4.text-uppercase,
   min-width: 6px; }
 
 .product-detail-slider-prev:not(.swiper-button-disabled):hover .icon-sprite.icon-arrow-prev-sm::before {
-  background-position: -244px -45px;
+  background-position: -167px -45px;
   height: 11px;
   width: 6px; }
 
@@ -7173,7 +7173,7 @@ h4.text-uppercase,
   min-width: 6px; }
 
 .product-detail-slider-next:not(.swiper-button-disabled):hover .icon-sprite.icon-arrow-next-sm::before {
-  background-position: -232px -56px;
+  background-position: -155px -56px;
   height: 11px;
   width: 6px; }
 

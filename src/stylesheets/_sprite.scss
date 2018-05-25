@@ -50,11 +50,6 @@
       width: 66px;
       min-width: 66px;
     }
-    @if $filename == icon-simplicity {
-      height: 89px;
-      width: 77px;
-      min-width: 77px;
-    }
     @if $filename == icon-soft {
       height: 56px;
       width: 79px;
@@ -69,67 +64,62 @@
 
   &::before {
     @if $filename == icon-arrow-next-sm-white {
-      background-position: -232px -56px;
+      background-position: -155px -56px;
       height: 11px;
       width: 6px;
     }
     @if $filename == icon-arrow-next-sm {
-      background-position: -232px -45px;
+      background-position: -155px -45px;
       height: 11px;
       width: 6px;
     }
     @if $filename == icon-arrow-prev-sm-white {
-      background-position: -244px -45px;
+      background-position: -167px -45px;
       height: 11px;
       width: 6px;
     }
     @if $filename == icon-arrow-prev-sm {
-      background-position: -238px -45px;
+      background-position: -161px -45px;
       height: 11px;
       width: 6px;
     }
     @if $filename == icon-check {
-      background-position: -202px -76px;
+      background-position: -125px -76px;
       height: 15px;
       width: 20px;
     }
     @if $filename == icon-close-primary {
-      background-position: -156px -45px;
+      background-position: -79px -45px;
       height: 46px;
       width: 46px;
     }
     @if $filename == icon-comment {
-      background-position: -156px -112px;
+      background-position: 0px -123px;
       height: 22px;
       width: 22px;
     }
     @if $filename == icon-instagram {
-      background-position: -202px -45px;
+      background-position: -125px -45px;
       height: 31px;
       width: 30px;
     }
     @if $filename == icon-like {
-      background-position: -156px -91px;
+      background-position: -79px -91px;
       height: 21px;
       width: 24px;
     }
     @if $filename == icon-natural {
-      background-position: 0px -89px;
+      background-position: 0px -56px;
       height: 67px;
       width: 66px;
     }
-    @if $filename == icon-simplicity {
-      background-position: 0px 0px;
-      height: 89px;
-      width: 77px;
-    }
     @if $filename == icon-soft {
-      background-position: -77px 0px;
+      background-position: 0px 0px;
       height: 56px;
       width: 79px;
     }
     @if $filename == icon-stylish {
-      background-position: -156px 0px;
+      background-position: -79px 0px;
       height: 45px;
       width: 95px;
     }
