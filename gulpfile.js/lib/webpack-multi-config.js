@@ -50,7 +50,9 @@ module.exports = function (env) {
 	      Modal: 'exports-loader?Modal!bootstrap/js/dist/modal',
 	      Button: 'exports-loader?Button!bootstrap/js/dist/button',
 	      Popover: 'exports-loader?Popover!bootstrap/js/dist/popover',
-        ScrollSpy: 'exports-loader?ScrollSpy!bootstrap/js/dist/scrollspy'
+        ScrollSpy: 'exports-loader?ScrollSpy!bootstrap/js/dist/scrollspy',
+        Scrollspy: 'exports-loader?ScrollSpy!bootstrap/js/dist/scrollspy',
+        scrollspy: 'exports-loader?ScrollSpy!bootstrap/js/dist/scrollspy'
       }) 
     ],
     resolve: {

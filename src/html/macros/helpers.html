@@ -4,3 +4,91 @@
     <svg viewBox="{{viewBox}}"><use xlink:href='images/icons.svg#{{id}}'></use></svg>
   </span>
 {% endmacro %}
+
+{% macro catalog_card(
+  index=''
+) %}
+<article class="catalog-card catalog-list-card p-4 d-flex flex-column mx-auto">
+  <div class="catalog-card__image-wrap d-block cover">
+    
+    <input class="catalog-card__color-r sr-only" type="radio" id="product_{{index}}_blue" checked="checked" name="product_{{index}}_color" value="">
+    <img class="catalog-card__image cover-object" src="/images/main/catalog-card-{{index}}-medium-blue.jpg" alt="" title="" width="300" height="300" />
+    
+    <input class="catalog-card__color-r sr-only" type="radio" id="product_{{index}}_pink" name="product_{{index}}_color" value="">
+    <img class="catalog-card__image cover-object" src="/images/main/catalog-card-{{index}}-medium-pink.jpg" alt="" title="" width="300" height="300" />
+    
+    <input class="catalog-card__color-r sr-only" type="radio" id="product_{{index}}_gray" name="product_{{index}}_color" value="">
+    <img class="catalog-card__image cover-object" src="/images/main/catalog-card-{{index}}-medium-gray.jpg" alt="" title="" width="300" height="300" />
+  </div>
+  <div class="catalog-card__toolbar mt-3">
+    <div class="catalog-card__toolbar-group-1 d-flex align-items-center justify-content-center">
+      <div class="colors-group colors-group js-radio-buttons">
+        <label class="colors-item colors-item-blue active" for="product_{{index}}_blue"></label>
+        <label class="colors-item colors-item-pink" for="product_{{index}}_pink"></label>
+        <label class="colors-item colors-item-gray" for="product_{{index}}_gray"></label>
+      </div>
+    </div>
+    <div class="catalog-card__toolbar-group-2 d-flex justify-content-center">
+      <div class="row no-gutters catalog-card__row">
+        <div class="col-6 catalog-card__col pr-1">
+          <button class="btn btn-primary btn-block catalog-card__btn" data-target="#fast_order" data-toggle="modal">Быстрый заказ</button>
+        </div>
+        <div class="col-6 catalog-card__col pl-1">
+          <a class="btn btn-outline-primary btn-block catalog-card__btn" href="" target="_blank">Купить на Orteka.ru</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="catalog-card__name mt-3">
+    <a class="fill-area-link text-dark" href="#fast_order" data-target="#fast_order" data-toggle="modal">Женские ортопедические сандалии ORTMANN Gert 7.87.2</a>
+  </div>
+  <div class="catalog-card__description text-muted mt-3">
+    Rehard Technologies GmbH, Германия
+  </div>
+  <div class="spacer"></div>
+  <div class="catalog-card__cost mt-4">
+    <div class="catalog-card__price pb-1">
+      <div class="price h5 mb-0 text-truncate">5 990 Р</div>
+    </div>
+  </div>
+</article>
+{% endmacro %}
+
+{% macro instagram_card(
+  index=''
+) %}
+<article class="instagram-card instagram-list-card p-4 p-md-5 d-flex flex-column bg-light">
+  <header class="instagram-card__header d-flex align-items-center flex-nowrap mb-4 mb-md-5">
+    <div class="instagram-card__header-primary pl-4 pl-md-0">
+      <div class="instagram-card__header-name text-truncate">
+        JILL BOON
+      </div>
+      <div class="instagram-card__header-link text-truncate mt-1">
+        instagram.com/jillbbon
+        {#
+        <a class="fill-area-link text-dark" href="#">instagram.com/jillbbon</a>
+        #}
+      </div>
+    </div>
+    <div class="instagram-card__header-secondary ml-6">
+      <i class="icon icon-sprite icon-instagram"></i>
+    </div>
+  </header>
+  <div class="instagram-card__image-wrap d-block cover">
+    <img class="instagram-card__image cover-object" src="/images/main/instagram-thumb-{{index}}.jpg" alt="" title="" width="400" height="400" />
+  </div>
+  <div class="spacer"></div>
+  <footer class="instagram-card__footer d-flex align-items-center mt-4">
+    <div class="instagram-button-group d-flex align-items-center flex-nowrap pb-2">
+      <div class="instagram-button-group__item mr-6">
+        <i class="icon icon-sprite icon-md icon-like mr-2"></i>
+        <span>137</span>
+      </div>
+      <div class="instagram-button-group__item mr-6">
+        <i class="icon icon-sprite icon-md icon-comment mr-2"></i>
+        <span>15</span>
+      </div>
+    </div>
+  </footer>  
+</article>
+{% endmacro %}

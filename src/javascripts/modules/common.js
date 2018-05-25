@@ -1,8 +1,9 @@
 import 'svgxuse';
-import 'bootstrap/js/dist/collapse';
-import 'bootstrap/js/dist/modal';
-import 'bootstrap/js/dist/util';
-import 'bootstrap/js/dist/button';
+// import 'bootstrap/js/dist/collapse';
+// import 'bootstrap/js/dist/modal';
+// import 'bootstrap/js/dist/util';
+// import 'bootstrap/js/dist/button';
+// import 'bootstrap/js/dist/scrollspy';
 import Drop from 'tether-drop';
 import autosize from 'autosize';
 import ismobile from 'ismobilejs';
@@ -84,6 +85,10 @@ $(() => {
   $(document).on('click.bs.dropdown.data-api', '[data-dismiss="dropdown"]', function () {
     $(this).parents('.dropdown').eq(0).find('[data-toggle="dropdown"]')
       .dropdown('toggle');
+  });
+
+  $(document).on('click', '.js-radio-buttons .colors-item, .js-radio-buttons .product-detail-slider-slide, .js-radio-buttons .btn', function () {
+    $(this).siblings().removeClass('active').end().addClass('active');
   });
 
   // autosize textarea

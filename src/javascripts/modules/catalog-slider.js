@@ -24,7 +24,7 @@ export default class CatalogSlider {
         autoHeight: false,
         observer: true,
         observeParents: true,
-        loop: true,
+        loop: false,
         pagination: {
           el: $pagination,
         },

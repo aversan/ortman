@@ -35,15 +35,7 @@ export default class ProductDetailSlider {
         pagination: {
           el: $pagination,
           clickable: true,
-        }, 
-        breakpoints: {
-          768: {
-            slidesPerView: 'auto',
-            spaceBetween: 20,
-            grabCursor: true,
-            freeMode: true,
-          },
-        },
+        }
       });
 
       mainSwiper.on('slideChange', () => {
@@ -57,15 +49,15 @@ export default class ProductDetailSlider {
     $navigation.each(function () {
       const $wrapper = $(this);
       const $swiperContainer = $wrapper.find('.js-swiper-container');
-      // const $prev = $wrapper.find('.js-swiper-prev');
-      // const $next = $wrapper.find('.js-swiper-next');
+      const $prev = $wrapper.find('.js-swiper-prev');
+      const $next = $wrapper.find('.js-swiper-next');
 
       navigationSwiper = new Swiper($swiperContainer, {
-        // navigation: {
-        //   prevEl: $prev,
-        //   nextEl: $next,
-        // },
-        // direction: 'vertical',
+        navigation: {
+          prevEl: $prev,
+          nextEl: $next,
+        },
+        direction: 'vertical',
         slidesPerView: 6,
         centeredSlides: false,
         spaceBetween: 10,

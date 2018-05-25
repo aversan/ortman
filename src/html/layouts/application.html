@@ -24,9 +24,10 @@
 		{% endblock %}
 		{% block javascript %}
 			<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-			<script src="javascripts/app.js"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+			<script src="javascripts/app.js"></script>
 			<script>
 				$(document).ready(function() {
 					$(".fancybox").fancybox({
@@ -38,6 +39,7 @@
 					});
 				});
               	new WOW().init();
+              	$('body').scrollspy({ target: '#header', offset: 80 });
 			</script>
     	{% endblock %}
   </body>

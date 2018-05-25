@@ -1,3 +1,5 @@
+{% from 'macros/helpers.html' import catalog_card %}
+
 <section data-module="catalog-slider" id="their-ortmans">
   <div class="container text-center">
     <div class="row no-gutters">
@@ -12,15 +14,16 @@
       <div class="swiper-pagination catalog-slider-pagination js-swiper-pagination d-md-none"></div>
       <div class="section-divider-half d-md-none"></div>
       <div class="swiper-wrapper">
-        {% for i in [1,2,3] -%}
-        {% if loop.index <= 3 %}
         <div class="swiper-slide catalog-slider-slide d-flex align-items-center">
-          {% include "main/catalog-card.html" %}
+          {{ catalog_card(index='01') }}
         </div>
-        {% endif %}
-        {%- endfor %}
+        <div class="swiper-slide catalog-slider-slide d-flex align-items-center">
+          {{ catalog_card(index='02') }}
+        </div>
+        <div class="swiper-slide catalog-slider-slide d-flex align-items-center">
+          {{ catalog_card(index='03') }}
+        </div>
       </div>
     </div>
-    {% include "main/card-modal.html" %}
   </div>
 </section>

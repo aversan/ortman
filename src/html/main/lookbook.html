@@ -1,8 +1,23 @@
 {%
 set items = [
-  { imageName: 'lookbook-02.jpg', imageWidth: 4239, imageHeight: 3434 },
-  { imageName: 'lookbook-01.jpg', imageWidth: 3262, imageHeight: 4843 },
-  { imageName: 'lookbook-03.jpg', imageWidth: 3546, imageHeight: 5319 }
+  { imageName: 'lookbook-01.jpg' },
+  { imageName: 'lookbook-02.jpg' },
+  { imageName: 'lookbook-03.jpg' },
+  { imageName: 'lookbook-04.jpg' },
+  { imageName: 'lookbook-05.jpg' },
+  { imageName: 'lookbook-06.jpg' },
+  { imageName: 'lookbook-07.jpg' },
+  { imageName: 'lookbook-08.jpg' },
+  { imageName: 'lookbook-09.jpg' },
+  { imageName: 'lookbook-10.jpg' },
+  { imageName: 'lookbook-11.jpg' },
+  { imageName: 'lookbook-12.jpg' },
+  { imageName: 'lookbook-13.jpg' },
+  { imageName: 'lookbook-14.jpg' },
+  { imageName: 'lookbook-15.jpg' },
+  { imageName: 'lookbook-16.jpg' },
+  { imageName: 'lookbook-17.jpg' },
+  { imageName: 'lookbook-18.jpg' }
 ]
 %}
 <section class="gallery-wide-slider" data-module="gallery-wide-slider" id="lookbook">
@@ -34,7 +49,7 @@ set items = [
         {% for item in items %}
         <div class="swiper-slide gallery-wide-slider-slide d-flex align-items-center justify-content-center">
           <a class="fill-area-link gallery-wide-slider-slide-link fancybox" href="/images/main/{{item.imageName}}" target="_blank" rel="gallery-group" title="{{item.title}}">
-            <img class="img-fluid gallery-wide-slider-image" src="/images/main/{{item.imageName}}" alt="" width="{{item.imageWidth}}" height="{{item.imageHeight}}">
+            <img class="img-fluid gallery-wide-slider-image" src="/images/main/{{item.imageName}}" alt="">
           </a>
         </div>
         {% endfor %}
