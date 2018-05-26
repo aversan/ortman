@@ -44,6 +44,7 @@
 
   &-nav {
     @include media-breakpoint-down(sm) {
+      margin-top: 12px;
       background-color: $white;
     }
   }
