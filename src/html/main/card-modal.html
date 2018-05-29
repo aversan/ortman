@@ -1,4 +1,4 @@
-<div class="modal card-modal pr-0" id="fast_order">
+<div class="modal card-modal pr-0 js-fast-order-modal" id="fast_order_01">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header pb-0 card-modal-header">
@@ -21,11 +21,11 @@
                 <div class="swiper-container product-detail-slider-container">
                   <div class="swiper-wrapper product-detail-slider-wrapper js-radio-buttons">
                     <label class="swiper-slide product-detail-slider-slide active">
-                      <input class="sr-only" name="order-color" type="radio" value="серый">
+                      <input class="sr-only js-order-color" name="order-color" type="radio" value="серый">
                       <img class="product-detail-slider-slide-image" src="/images/main/catalog-card-01-small-gray.jpg" alt="" width="66" height="66">
                     </label>
                     <label class="swiper-slide product-detail-slider-slide">
-                      <input class="sr-only" name="order-color" type="radio" value="розовый">
+                      <input class="sr-only js-order-color" name="order-color" type="radio" value="розовый">
                       <img class="product-detail-slider-slide-image" src="/images/main/catalog-card-01-small-pink.jpg" alt="" width="66" height="66">
                     </label>
                   </div>
@@ -41,31 +41,31 @@
                 <div class="card-modal-sizes-btns pt-1 pb-0 pb-md-1 js-radio-buttons">
                   <label class="btn btn-outline-secondary card-modal-sizes-btn active">
                       35
-                      <input class="sr-only" name="order-size" type="radio" value="35" checked="checked">
+                      <input class="sr-only js-order-size" name="order-size" type="radio" value="35" checked="checked">
                   </label>
                   <label class="btn btn-outline-secondary card-modal-sizes-btn">
                       36
-                      <input class="sr-only" name="order-size" type="radio" value="36">
+                      <input class="sr-only js-order-size" name="order-size" type="radio" value="36">
                   </label>
                   <label class="btn btn-outline-secondary card-modal-sizes-btn">
                       37
-                      <input class="sr-only" name="order-size" type="radio" value="37">
+                      <input class="sr-only js-order-size" name="order-size" type="radio" value="37">
                   </label>
                   <label class="btn btn-outline-secondary card-modal-sizes-btn">
                       38
-                      <input class="sr-only" name="order-size" type="radio" value="38">
+                      <input class="sr-only js-order-size" name="order-size" type="radio" value="38">
                   </label>
                   <label class="btn btn-outline-secondary card-modal-sizes-btn">
                       39
-                      <input class="sr-only" name="order-size" type="radio" value="39">
+                      <input class="sr-only js-order-size" name="order-size" type="radio" value="39">
                   </label>
                   <label class="btn btn-outline-secondary card-modal-sizes-btn">
                       40
-                      <input class="sr-only" name="order-size" type="radio" value="40">
+                      <input class="sr-only js-order-size" name="order-size" type="radio" value="40">
                   </label>
                   <label class="btn btn-outline-secondary card-modal-sizes-btn">
                       41
-                      <input class="sr-only" name="order-size" type="radio" value="41">
+                      <input class="sr-only js-order-size" name="order-size" type="radio" value="41">
                   </label>
                 </div>
               </div>
@@ -78,19 +78,19 @@
               <div class="card-modal-form">
                 <h4 class="text-uppercase mb-2">Оформление заказа</h4>
                 <div class="row">
-                  <label class="col-4 col-md-2 col-form-label card-modal-form-label py-2" for="order-color">
+                  <label class="col-4 col-md-2 col-form-label card-modal-form-label py-2">
                     Цвет:
                   </label>
                   <div class="col-8 col-md-10">
-                    <div readonly class="form-control-plaintext card-modal-form-plaintext py-2" id="order-color-2">Серый</div>
+                    <div class="form-control-plaintext card-modal-form-plaintext py-2 js-order-color-2">Серый</div>
                   </div>
                 </div>
                 <div class="row">
-                  <label class="col-4 col-md-2 col-form-label card-modal-form-label py-2" for="order-size">
+                  <label class="col-4 col-md-2 col-form-label card-modal-form-label py-2">
                     Размер:
                   </label>
                   <div class="col-8 col-md-10">
-                    <div class="form-control-plaintext card-modal-form-plaintext py-2" id="order-size-2">35</div>
+                    <div class="form-control-plaintext card-modal-form-plaintext py-2 js-order-size-2">35</div>
                   </div>
                 </div>
                 <div class="mt-3">

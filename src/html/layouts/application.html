@@ -46,16 +46,23 @@
 
               	$('body').scrollspy({ target: '#header', offset: 80 });
 
-				$('[name*="order-color"]').on('change', function () {
-					var color = $(this).val();
-					$('#order-color-2').empty().text(color);
-					$('[data-module*="product-detail-slider"][data-color*="' + color + '"]').siblings().addClass('d-none').end().removeClass('d-none');
-					$(window).trigger('resize');
-				});
+				$('.js-fast-order-modal').each(function(){
+					var $modal = $(this);
+					var $color = $modal.find('.js-order-color');
+					var $size = $modal.find('.js-order-size');
+					var $sliders = $modal.find('[data-module*="product-detail-slider"]');
 
-				$('[name*="order-size"]').on('change', function () {
-					var size = $(this).val();
-					$('#order-size-2').empty().text(size);
+					$size.on('change', function () {
+						var size = $(this).val();
+						$modal.find('.js-order-size-2').empty().text(size);
+					});
+
+					$color.on('change', function () {
+						var color = $(this).val();
+						$modal.find('.js-order-color-2').empty().text(color);
+						
+						$sliders.filter('[data-color*=' + color + ']').siblings().addClass('d-none').end().removeClass('d-none');
+					});
 				});
 
 				var $forms = $('.js-fast-order-form');
