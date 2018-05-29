@@ -6070,6 +6070,9 @@ td.text-truncate {
     .section-divider {
       margin-top: 3.125rem; } }
 
+.form-control.error {
+  border-color: #f53b40; }
+
 .success-text {
   width: 100%;
   margin-top: 8px;
@@ -6144,6 +6147,15 @@ h4.text-uppercase,
   background-size: cover;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxNnYxNkgweiIvPgogICAgICAgIDxwYXRoIHN0cm9rZT0iIzAwMCIgZD0iTTYgMTEuNjE5bDMuODEtMy44MUw2IDQiLz4KICAgIDwvZz4KPC9zdmc+Cg==);
   background-position: 0 0; }
+
+.form-control.error {
+  border-color: #f53b40 !important; }
+
+.form-error {
+  display: block;
+  font-size: 80%;
+  margin-top: .25rem;
+  color: #f53b40; }
 
 .drop-element,
 .drop-element:after,
@@ -6956,6 +6968,12 @@ h4.text-uppercase,
 
 .gallery-wide-slider-container-primary {
   max-width: 1200px; }
+
+.gallery-wide-slider-container {
+  margin-top: -30px;
+  margin-bottom: -30px;
+  padding-top: 30px;
+  padding-bottom: 30px; }
 
 .card-modal-container {
   position: relative; }

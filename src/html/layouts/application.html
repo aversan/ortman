@@ -25,6 +25,9 @@
 		{% block javascript %}
 			<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.77/jquery.form-validator.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.77/lang/ru.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.77/toggleDisabled.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
 			<script src="javascripts/app.js"></script>
@@ -54,6 +57,24 @@
 					var size = $(this).val();
 					$('#order-size-2').empty().text(size);
 				});
+
+				var $forms = $('.js-fast-order-form');
+				$forms.each(function(){
+					var $form = $(this);
+					$.validate({
+						form : $form,
+						lang: 'ru',
+						modules : 'toggleDisabled',
+						addSuggestions : false,
+						showHelpOnFocus : false,
+						onSuccess: function(){
+							console.log('valid');
+						},
+						onError: function() {
+							console.log('invalid');
+						}
+					});					
+				})
 			</script>
     	{% endblock %}
   </body>

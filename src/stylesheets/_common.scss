@@ -197,6 +197,10 @@ td.text-truncate {
   }
 }
 
+.form-control.error {
+  border-color: $pink;
+}
+
 .success-text {
   width: 100%;
   margin-top: 8px;
