@@ -6424,10 +6424,12 @@ h4.text-uppercase,
   overflow: hidden; }
   .footer-copy {
     font-size: .75rem;
-    line-height: 1.2; }
+    line-height: 1.2;
+    white-space: nowrap; }
     @media (max-width: 767.98px) {
       .footer-copy {
-        max-width: 110px; } }
+        max-width: 110px;
+        white-space: normal; } }
   .footer-address {
     font-size: .8125rem;
     line-height: 1.2;

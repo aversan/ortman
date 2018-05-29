@@ -19,7 +19,7 @@
       z-index: 2;
 
       @include media-breakpoint-down(sm) {
-        transform: scale(1);;
+        transform: scale(1);
         z-index: auto;
       }
     }

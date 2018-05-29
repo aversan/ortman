@@ -1,4 +1,4 @@
-import Swiper from 'swiper';
+import Swiper from 'swiper/dist/js/swiper';
 
 export default class PromoWideSlider {
   constructor(el) {

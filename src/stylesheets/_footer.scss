@@ -6,9 +6,11 @@
   &-copy {
     font-size: .75rem;
     line-height: 1.2;
+    white-space: nowrap;
 
     @include media-breakpoint-down(sm) {
       max-width: 110px;
+      white-space: normal;
     }
   }
 
