@@ -22,12 +22,6 @@
     }
 
     &.swiper-button-disabled {
-      opacity: .25;
-      cursor: default;
-      pointer-events: none;
-    }
-
-    .product-detail-slider-disabled & {
       opacity: 0;
       cursor: default;
       pointer-events: none;

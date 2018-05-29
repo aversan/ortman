@@ -4,13 +4,13 @@
     margin-right: 1px;
     width: 32.03125vw;
     //height: (570 / 1280) * 100 * 1vw;
-    height: (380 / 1280) * 100 * 1vw;
+    // height: (380 / 1280) * 100 * 1vw;
     overflow: hidden;
     transition: $transition-base;
 
     @include media-breakpoint-down(sm) {
       width: 100%;
-      height: (375 / 320) * 100 * 1vw;
+      // height: (375 / 320) * 100 * 1vw;
       margin-right: 20px;
     }
 

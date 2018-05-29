@@ -3,6 +3,7 @@
   --primary: #e41d23;
   --secondary: #c2c2c2;
   --danger: #e41d23;
+  --blue: #004288;
   --light: #f5f5f5;
   --dark: #252525;
   --white: #fff;
@@ -1200,6 +1201,17 @@ mark,
   .table-hover .table-danger:hover > th {
     background-color: #f4a9ab; }
 
+.table-blue,
+.table-blue > th,
+.table-blue > td {
+  background-color: #b8cade; }
+
+.table-hover .table-blue:hover {
+  background-color: #a7bdd6; }
+  .table-hover .table-blue:hover > td,
+  .table-hover .table-blue:hover > th {
+    background-color: #a7bdd6; }
+
 .table-light,
 .table-light > th,
 .table-light > td {
@@ -1798,6 +1810,30 @@ fieldset:disabled a.btn {
     .show > .btn-danger.dropdown-toggle:focus {
       box-shadow: none, 0 0 0 0.2rem rgba(228, 29, 35, 0.5); }
 
+.btn-blue {
+  color: #fff;
+  background-color: #004288;
+  border-color: #004288;
+  box-shadow: none; }
+  .btn-blue:hover {
+    color: #fff;
+    background-color: #002f62;
+    border-color: #002955; }
+  .btn-blue:focus, .btn-blue.focus {
+    box-shadow: none, 0 0 0 0.2rem rgba(0, 66, 136, 0.5); }
+  .btn-blue.disabled, .btn-blue:disabled {
+    color: #fff;
+    background-color: #004288;
+    border-color: #004288; }
+  .btn-blue:not(:disabled):not(.disabled):active, .btn-blue:not(:disabled):not(.disabled).active,
+  .show > .btn-blue.dropdown-toggle {
+    color: #fff;
+    background-color: #002955;
+    border-color: #002348; }
+    .btn-blue:not(:disabled):not(.disabled):active:focus, .btn-blue:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-blue.dropdown-toggle:focus {
+      box-shadow: none, 0 0 0 0.2rem rgba(0, 66, 136, 0.5); }
+
 .btn-light {
   color: #252525;
   background-color: #f5f5f5;
@@ -1938,6 +1974,29 @@ fieldset:disabled a.btn {
     .btn-outline-danger:not(:disabled):not(.disabled):active:focus, .btn-outline-danger:not(:disabled):not(.disabled).active:focus,
     .show > .btn-outline-danger.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(228, 29, 35, 0.5); }
+
+.btn-outline-blue {
+  color: #004288;
+  background-color: transparent;
+  background-image: none;
+  border-color: #004288; }
+  .btn-outline-blue:hover {
+    color: #fff;
+    background-color: #004288;
+    border-color: #004288; }
+  .btn-outline-blue:focus, .btn-outline-blue.focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 66, 136, 0.5); }
+  .btn-outline-blue.disabled, .btn-outline-blue:disabled {
+    color: #004288;
+    background-color: transparent; }
+  .btn-outline-blue:not(:disabled):not(.disabled):active, .btn-outline-blue:not(:disabled):not(.disabled).active,
+  .show > .btn-outline-blue.dropdown-toggle {
+    color: #fff;
+    background-color: #004288;
+    border-color: #004288; }
+    .btn-outline-blue:not(:disabled):not(.disabled):active:focus, .btn-outline-blue:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-outline-blue.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(0, 66, 136, 0.5); }
 
 .btn-outline-light {
   color: #f5f5f5;
@@ -3057,6 +3116,14 @@ button.bg-danger:hover,
 button.bg-danger:focus {
   background-color: #b8161b !important; }
 
+.bg-blue {
+  background-color: #004288 !important; }
+
+a.bg-blue:hover, a.bg-blue:focus,
+button.bg-blue:hover,
+button.bg-blue:focus {
+  background-color: #002955 !important; }
+
 .bg-light {
   background-color: #f5f5f5 !important; }
 
@@ -3125,6 +3192,9 @@ button.bg-white:focus {
 
 .border-danger {
   border-color: #e41d23 !important; }
+
+.border-blue {
+  border-color: #004288 !important; }
 
 .border-light {
   border-color: #f5f5f5 !important; }
@@ -5229,6 +5299,12 @@ a.text-secondary:hover, a.text-secondary:focus {
 a.text-danger:hover, a.text-danger:focus {
   color: #b8161b !important; }
 
+.text-blue {
+  color: #004288 !important; }
+
+a.text-blue:hover, a.text-blue:focus {
+  color: #002955 !important; }
+
 .text-light {
   color: #f5f5f5 !important; }
 
@@ -5933,6 +6009,12 @@ td.text-truncate {
     background-color: #a39c98; }
   .colors-item-blue {
     background-color: #5d92d7; }
+  .colors-item-red {
+    background-color: #ff0000; }
+  .colors-item-silver {
+    background-color: #c0c0c0; }
+  .colors-item-black {
+    background-color: #000; }
   .colors-item.active {
     cursor: default; }
     .colors-item.active::before {
@@ -5987,6 +6069,16 @@ td.text-truncate {
   @media (max-width: 767.98px) {
     .section-divider {
       margin-top: 3.125rem; } }
+
+.success-text {
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px 0;
+  background: #ccffcc;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 20px;
+  color: green; }
 
 @media (max-width: 767.98px) {
   .container {
@@ -6681,8 +6773,9 @@ h4.text-uppercase,
   .catalog-card:hover, .catalog-card.hover {
     box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.2);
     margin-bottom: -3.125rem; }
-    .is-mobile .catalog-card:hover, .is-mobile .catalog-card.hover {
-      box-shadow: none; }
+  .is-mobile .catalog-card {
+    box-shadow: none;
+    margin-bottom: 0; }
   .catalog-card__image-wrap {
     position: relative;
     height: 235px; }
@@ -6727,6 +6820,12 @@ h4.text-uppercase,
     height: 0;
     pointer-events: none;
     overflow: hidden; }
+    .is-mobile .catalog-card__toolbar-group-2 {
+      padding-top: .625rem;
+      height: 3.125rem;
+      opacity: 1;
+      pointer-events: auto;
+      overflow: visible; }
     .catalog-card:hover .catalog-card__toolbar-group-2,
     .catalog-card.hover .catalog-card__toolbar-group-2 {
       padding-top: .625rem;
@@ -6803,13 +6902,11 @@ h4.text-uppercase,
   position: relative;
   margin-right: 1px;
   width: 32.03125vw;
-  height: 29.6875vw;
   overflow: hidden;
   transition: all 0.2s ease-in-out; }
   @media (max-width: 767.98px) {
     .gallery-wide-slider-slide {
       width: 100%;
-      height: 117.1875vw;
       margin-right: 20px; } }
   .gallery-wide-slider-slide.swiper-slide-active + .gallery-wide-slider-slide {
     transform: scale(1.1);
@@ -7128,10 +7225,6 @@ h4.text-uppercase,
   .product-detail-slider-prev:hover, .product-detail-slider-prev:focus, .product-detail-slider-next:hover, .product-detail-slider-next:focus {
     opacity: 1; }
   .product-detail-slider-prev.swiper-button-disabled, .product-detail-slider-next.swiper-button-disabled {
-    opacity: .25;
-    cursor: default;
-    pointer-events: none; }
-  .product-detail-slider-disabled .product-detail-slider-prev, .product-detail-slider-disabled .product-detail-slider-next {
     opacity: 0;
     cursor: default;
     pointer-events: none; }

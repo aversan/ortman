@@ -123,6 +123,9 @@ td.text-truncate {
   &-pink { background-color: #f54049; }
   &-gray { background-color: #a39c98; }
   &-blue { background-color: #5d92d7; }
+  &-red { background-color: #ff0000; }
+  &-silver { background-color: #c0c0c0; }
+  &-black { background-color: #000; }
 
   &.active {
     cursor:default;
@@ -192,4 +195,15 @@ td.text-truncate {
   @include media-breakpoint-down(sm) {
     margin-top: 3.125rem; // 50px
   }
+}
+
+.success-text {
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px 0;
+  background: #ccffcc;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 20px;
+  color: green;
 }

@@ -47,6 +47,7 @@
 					var color = $(this).val();
 					$('#order-color-2').empty().text(color);
 					$('[data-module*="product-detail-slider"][data-color*="' + color + '"]').siblings().addClass('d-none').end().removeClass('d-none');
+					$(window).trigger('resize');
 				});
 
 				$('[name*="order-size"]').on('change', function () {

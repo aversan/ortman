@@ -16,15 +16,15 @@ export default class CatalogSlider {
           prevEl: $prev,
           nextEl: $next,
         },
-        slidesPerView: 2,
-        spaceBetween: 40,
+        slidesPerView: 3,
+        spaceBetween: 20,
         slideToClickedSlide: false,
         initialSlide: 0,
         setWrapperSize: true,
         autoHeight: false,
         observer: true,
         observeParents: true,
-        loop: true,
+        loop: false,
         pagination: {
           el: $pagination,
           clickable: true,
@@ -32,7 +32,6 @@ export default class CatalogSlider {
         breakpoints: {
           768: {
             slidesPerView: 1,
-            spaceBetween: 20,
           }
         },
         onInit: function(swiper) {

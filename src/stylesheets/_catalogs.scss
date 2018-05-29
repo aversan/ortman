@@ -10,10 +10,11 @@
   &.hover {
     box-shadow: $box-shadow;
     margin-bottom: -3.125rem;
+  }
 
-    .is-mobile & {
-      box-shadow: none;
-    }
+  .is-mobile & {
+    box-shadow: none;
+    margin-bottom: 0;
   }
 
   &__image-wrap {
@@ -79,6 +80,14 @@
     height: 0;
     pointer-events: none;
     overflow: hidden;
+
+    .is-mobile & {
+      padding-top: .625rem;
+      height: 3.125rem;
+      opacity: 1;
+      pointer-events: auto;
+      overflow: visible;
+    }
 
     .catalog-card:hover &,
     .catalog-card.hover & {
