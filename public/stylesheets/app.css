@@ -5905,6 +5905,14 @@ button.swiper-pagination-bullet {
   /* Windows 8 IE 10 fix */
   -ms-perspective: 1200px; }
 
+body,
+html {
+  height: 100%; }
+
+body {
+  min-width: 320px;
+  overflow-x: auto; }
+
 .is-desktop.disable-hover,
 .is-desktop.disable-hover * {
   pointer-events: none !important; }
@@ -6850,6 +6858,10 @@ h4.text-uppercase,
 .catalog-slider-container {
   padding: 10px 10px 100px 10px;
   margin: -10px -10px -100px -10px; }
+  @media (max-width: 767.98px) {
+    .is-mobile .catalog-slider-container {
+      padding: 0;
+      margin: 0; } }
 
 .catalog-slider-pagination {
   position: static; }

@@ -1,5 +1,12 @@
+body,
+html {
+  height: 100%;
+}
+
 body {
   // min-width: 1030px;
+  min-width: 320px;
+  overflow-x: auto;
 }
 
 .is-desktop.disable-hover,
