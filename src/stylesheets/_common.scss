@@ -1,9 +1,5 @@
 body {
   // min-width: 1030px;
-
-  @include media-breakpoint-down(sm) {
-    min-width: 320px;
-  }
 }
 
 .is-desktop.disable-hover,

@@ -8,7 +8,7 @@ export default class ScrollTo {
       const id = this.el.getAttribute('href').slice(1);
       const el = document.getElementById(id);
       scrollToElement(el, {
-          offset: 90,
+          offset: -130,
           ease: 'inOutQuart',
           duration: 1500
         }

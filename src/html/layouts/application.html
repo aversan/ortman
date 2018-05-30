@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}{{ title }}{% endblock %}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/css/inputmask.min.css">
     <link rel="stylesheet" href="stylesheets/app.css">
     {% include "shared/app-icons.html" %}
     {% block head %}{% endblock %}
@@ -30,6 +31,7 @@
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.77/toggleDisabled.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
 			<script src="javascripts/app.js"></script>
 			<script>
 				$(document).ready(function() {
@@ -40,48 +42,57 @@
 							}
 						}
 					});
-				});
 
-              	new WOW().init();
+	              	new WOW().init();
 
-              	$('body').scrollspy({ target: '#header', offset: 80 });
+	              	$('body').scrollspy({ target: '#header', offset: 130 });
 
-				$('.js-fast-order-modal').each(function(){
-					var $modal = $(this);
-					var $color = $modal.find('.js-order-color');
-					var $size = $modal.find('.js-order-size');
-					var $sliders = $modal.find('[data-module*="product-detail-slider"]');
+					$('.js-fast-order-modal').each(function(){
+						var $modal = $(this);
+						var $color = $modal.find('.js-order-color');
+						var $size = $modal.find('.js-order-size');
+						var $sliders = $modal.find('[data-module*="product-detail-slider"]');
 
-					$size.on('change', function () {
-						var size = $(this).val();
-						$modal.find('.js-order-size-2').empty().text(size);
+						$size.on('change', function () {
+							var size = $(this).val();
+							$modal.find('.js-order-size-2').empty().text(size);
+						});
+
+						$color.on('change', function () {
+							var color = $(this).val();
+							$modal.find('.js-order-color-2').empty().text(color);
+							
+							$sliders.filter('[data-color*=' + color + ']').siblings().addClass('d-none').end().removeClass('d-none');
+						});
 					});
 
-					$color.on('change', function () {
-						var color = $(this).val();
-						$modal.find('.js-order-color-2').empty().text(color);
-						
-						$sliders.filter('[data-color*=' + color + ']').siblings().addClass('d-none').end().removeClass('d-none');
-					});
-				});
+					var $forms = $('.js-fast-order-form');
+					$forms.each(function(){
+						var $form = $(this);
+						$.validate({
+							form : $form,
+							lang: 'ru',
+							modules : 'toggleDisabled',
+							addSuggestions : false,
+							showHelpOnFocus : false,
+							onSuccess: function(){
+								console.log('valid');
+							},
+							onError: function() {
+								console.log('invalid');
+							}
+						});					
+					})
 
-				var $forms = $('.js-fast-order-form');
-				$forms.each(function(){
-					var $form = $(this);
-					$.validate({
-						form : $form,
-						lang: 'ru',
-						modules : 'toggleDisabled',
-						addSuggestions : false,
-						showHelpOnFocus : false,
-						onSuccess: function(){
-							console.log('valid');
-						},
-						onError: function() {
-							console.log('invalid');
-						}
-					});					
-				})
+			        $(document).on('click', '.header-collapse', function(event) {
+			        	var $collapse = $(this);
+			        	if ($collapse.hasClass('show')) {
+			        		$collapse.collapse('hide');
+			        	}
+			        });
+
+			        $('.js-phone-mask').inputmask({"mask": "+7 999 999-99-99"});
+				});
 			</script>
     	{% endblock %}
   </body>

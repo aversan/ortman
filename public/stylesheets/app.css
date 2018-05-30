@@ -5905,10 +5905,6 @@ button.swiper-pagination-bullet {
   /* Windows 8 IE 10 fix */
   -ms-perspective: 1200px; }
 
-@media (max-width: 767.98px) {
-  body {
-    min-width: 320px; } }
-
 .is-desktop.disable-hover,
 .is-desktop.disable-hover * {
   pointer-events: none !important; }
@@ -6892,10 +6888,6 @@ h4.text-uppercase,
 .instagram-button-group__item {
   font-size: .75rem; }
 
-.instagram-slider-container {
-  padding: 10px;
-  margin: -10px; }
-
 .instagram-slider-pagination {
   position: static; }
 
@@ -6910,7 +6902,8 @@ h4.text-uppercase,
 @media (max-width: 767.98px) {
   .instagram-slider-container-primary {
     padding-left: 0;
-    padding-right: 0; } }
+    padding-right: 0;
+    overflow: hidden; } }
 
 .gallery-wide-slider-slide {
   position: relative;
